@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load custom_tags %}
+  {% block body_block %}
+    <h1>WELCOME TO RELATIVE PAGE!</h1>
+    <h2>This is an example of template inheritance!</h2>
+    <p>{{ relative_dict|get_item:'reltext'|upper }}</p>
+    <p>{{ relative_dict.relnumber }}</p>
+    <h2>This is end of template inheritance!</h2>
+  {% endblock %}
